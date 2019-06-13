@@ -9,6 +9,3 @@
   grid-template-columns: 40% auto;
   grid-column-gap: 5px;
 }
-.col {
-  background-color: pink;
-}

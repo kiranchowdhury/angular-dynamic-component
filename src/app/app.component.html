@@ -1,19 +1,5 @@
+<button (click) = "createListComponent()">Create Listbox Component</button>
 <div class = "wrapper">
-<div class="row">
-  <div class="col">
-      COL 1
-  </div>
-  <div class="col">
-      COL 21
-  </div>
-</div>
-<div class="row">
-  <div class="col">
-    COL 3
-  </div>
-  <div class="col">
-    COL 4
-  </div>
+  <app-dynamic class="row" [componentData]="componentData"></app-dynamic>
 </div>
 
-</div>
