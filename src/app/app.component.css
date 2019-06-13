@@ -1,11 +1,11 @@
 .wrapper {
   display: grid;
-  min-width: 300px;
+  min-width: 200px;
   grid-row-gap: 10px;
 }
 
 .row {
   display: grid;
-  grid-template-columns: 40% auto;
+  grid-template-columns: 40% 50% auto;
   grid-column-gap: 5px;
 }

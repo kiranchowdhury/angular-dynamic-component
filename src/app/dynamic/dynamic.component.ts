@@ -19,7 +19,6 @@ export class DynamicComponent {
       };
     });
     
-    console.log(inputProviders);
     
     let resolvedInputs = ReflectiveInjector.resolve(inputProviders);
 
@@ -37,7 +36,7 @@ export class DynamicComponent {
     let tempViewRefIndex = this.dynamicComponentContainer.indexOf(tempViewRef);
    // console.log(this.dynamicComponentContainer.get(tempViewRefIndex));
     
-    console.log('**showNum Provider',this.dynamicComponentContainer);
+    // console.log('**showNum Provider',this.dynamicComponentContainer);
     
     // Destroy the previously created component
     if(this.currentComponent){
@@ -46,6 +45,7 @@ export class DynamicComponent {
     
     this.currentComponent = component;
   }
+
   constructor(private resolver: ComponentFactoryResolver) { }
 
 

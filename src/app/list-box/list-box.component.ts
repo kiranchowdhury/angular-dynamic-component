@@ -10,6 +10,7 @@ export class ListBoxComponent implements OnInit {
 
   @Input() items: any[];
   @Input() defaultItem: any;
+  @Input() id: string;
 
   dropdownForm: FormGroup;
 

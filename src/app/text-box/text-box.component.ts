@@ -9,6 +9,7 @@ export class TextBoxComponent implements OnInit {
 
   @Input() searchString;
   @Input() helpText;
+  @Input() id: string;
 
   constructor(private injector: Injector) {
     this.searchString = injector.get('searchString');
