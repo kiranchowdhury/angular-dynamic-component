@@ -1,4 +1,5 @@
 <div class="text-box-wrapper">
 <input type="text" [(ngModel)]="searchString">
 <button>Remove</button>
+<span *ngIf="helpText && helpText.length > 0">{{helpText}}</span>
 </div>
