@@ -14,6 +14,7 @@ export class TextBoxComponent implements OnInit {
   constructor(private injector: Injector) {
     this.searchString = injector.get('searchString');
     this.helpText = injector.get('helpText');
+    this.id = injector.get('id');
    }
 
   ngOnInit() {

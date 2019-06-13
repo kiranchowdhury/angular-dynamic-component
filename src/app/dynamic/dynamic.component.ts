@@ -7,6 +7,7 @@ import {Component, Input, ViewContainerRef, ViewChild, ReflectiveInjector, Compo
 export class DynamicComponent {
   currentComponent = null;
   @ViewChild('dynamicComponentContainer', { read: ViewContainerRef, static: false }) dynamicComponentContainer: ViewContainerRef;
+  componentMap = [];
   @Input() set componentData(data: {component: any, inputs: any }) {
     if (!data) {
       return;
@@ -44,6 +45,11 @@ export class DynamicComponent {
     }
     
     this.currentComponent = component;
+    console.log('component id => ', (<any>component.instance).id);
+
+    this.componentMap.push({id: (<any>component.instance).id, componentRef: component });
+
+    console.log('The map', this.componentMap);
   }
 
   constructor(private resolver: ComponentFactoryResolver) { }

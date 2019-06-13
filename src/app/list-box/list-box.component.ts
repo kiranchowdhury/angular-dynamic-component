@@ -17,6 +17,7 @@ export class ListBoxComponent implements OnInit {
   constructor(private injector: Injector, private fb: FormBuilder) {
     this.items = injector.get('items');
     this.defaultItem = injector.get('defaultItem');
+    this.id = injector.get('id');
   }
 
   ngOnInit() {
