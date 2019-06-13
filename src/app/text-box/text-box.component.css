@@ -1,0 +1,5 @@
+.text-box-wrapper {
+  display: grid;
+  grid-template-columns: 80% auto;
+  grid-column-gap: 5px;
+}
