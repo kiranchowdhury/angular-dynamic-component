@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Injector } from '@angular/core';
 
 @Component({
   selector: 'app-text-box',
@@ -10,7 +10,10 @@ export class TextBoxComponent implements OnInit {
   @Input() searchString;
   @Input() helpText;
 
-  constructor() { }
+  constructor(private injector: Injector) {
+    this.searchString = injector.get('searchString');
+    this.helpText = injector.get('helpText');
+   }
 
   ngOnInit() {
   }

@@ -1,0 +1,5 @@
+<form [formGroup]="dropdownForm">
+  <select formControlName="selectedItem">
+    <option [value]="item" *ngFor = "let item of items">{{item}}</option>
+  </select>
+</form>

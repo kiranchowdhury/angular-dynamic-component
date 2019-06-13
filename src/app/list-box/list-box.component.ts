@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Injector } from '@angular/core';
+// import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-list-box',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListBoxComponent implements OnInit {
 
-  constructor() { }
+  @Input() items: any[];
+  @Input() defaultItem: any;
+
+  // dropdownForm: FormGroup;
+
+  constructor(private injector: Injector) {
+    this.items = injector.get('items');
+    this.defaultItem = injector.get('defaultItem');
+  }
 
   ngOnInit() {
+    // this.dropdownForm = this.fb.group({
+    //   selectedItem: [this.defaultItem]
+    // });
   }
 
 }
