@@ -1,0 +1,14 @@
+.wrapper {
+  display: grid;
+  min-width: 300px;
+  grid-row-gap: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 40% auto;
+  grid-column-gap: 5px;
+}
+.col {
+  background-color: pink;
+}
